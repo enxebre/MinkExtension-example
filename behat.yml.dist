@@ -5,7 +5,12 @@ default:
     Behat\MinkExtension\Extension:
       base_url:  'http://en.wikipedia.org/'
       goutte:    ~
-      selenium2: ~
+      selenium2:
+        capabilities:
+          browser: firefox
+          browserName: firefox
+          version: ""
+        wd_host: selenium:4444/wd/hub
 
 # No context:
 no_context:
